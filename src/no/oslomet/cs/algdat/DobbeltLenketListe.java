@@ -77,7 +77,44 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public void leggInn(int indeks, T verdi) {
-        throw new UnsupportedOperationException();
+        // sjekker om indeksen er <0 eller større en antal tilate noder i listen
+        if (indeks < 0 || indeks > antall){
+            throw new IndexOutOfBoundsException();
+        }
+
+        //sjekker om null-verdier
+        if (verdi == null){
+            throw new NullPointerException();
+        }
+        //Her skal vi sjekke om noden skal legges i første posisjon.
+        if (indeks == 0){
+            Node<T> r = new Node<>(verdi);
+            r.neste=hode;
+            hode.forrige=r;
+            hode=r;
+        }
+        //sjekker om noden skal legges i sisste posisjon.
+        else if (indeks == antall){
+            Node<T> p = new Node<>(verdi);
+            hale.neste=p;
+            p.forrige=hale;
+            hale=p;
+        }
+        else {
+            //Node<T> m = new Node<>()
+            //instaialisere hode noden
+            Node<T> current= hode;
+            //læper vi over hele listen for å finne noden.
+            for (int i = 0;i<indeks;i++){
+                current=current.neste;
+            }
+            //her instialiserer den noden som vi skal legge til
+            Node<T> m = new Node<>(verdi,current.forrige,current);
+            current = m;
+            m.forrige.neste = current.neste.forrige = current;
+        }
+        antall++;
+        endringer++;
     }
 
     @Override
