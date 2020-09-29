@@ -139,7 +139,10 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public boolean fjern(T verdi) {
-        throw new UnsupportedOperationException();
+       if (verdi == null){
+           return false;
+       }
+       return true;
     }
 
     @Override
@@ -182,7 +185,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public void nullstill() {
-        throw new UnsupportedOperationException();
+        //throw new UnsupportedOperationException();
     }
 
     @Override
