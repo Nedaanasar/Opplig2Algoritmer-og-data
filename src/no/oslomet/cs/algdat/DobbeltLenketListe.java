@@ -144,7 +144,40 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public T fjern(int indeks) {
-        throw new UnsupportedOperationException();
+
+        Node<T> q;
+        //sjekker om indexen til noden som skal fjernes
+        //1- første noden
+        if (indeks==0){
+            q = hode;
+            hode = hode.neste;
+            hode.forrige=null;
+        }
+        //2- sisste noden i listen
+        else if (indeks ==antall-1){
+            q= hale;
+            hale=q.forrige;
+            hale.neste = null;
+        }
+        //3- om den er nærmere til hoden
+        else if (indeks <antall/2){
+            q = hode;
+            for (int i = 0; i<indeks;i++){
+                q =q.neste;
+            }
+
+        }
+        // 4- om den er nærmere til halen
+        else{
+            q= hale;
+            for (int i = antall-1; i>indeks;i--){
+                q = q.forrige;
+            }
+        }
+        antall--;
+        endringer++;
+        return q.verdi;
+
     }
 
     @Override
