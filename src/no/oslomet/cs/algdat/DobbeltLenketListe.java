@@ -72,7 +72,30 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public boolean leggInn(T verdi) {
-            throw new UnsupportedOperationException();
+        // først legger vi requireNonNull- metode
+            Objects.requireNonNull(verdi);
+        // vi legger ny node
+            Node<T> nyNode = new Node<>(verdi);
+        // sjekker  om listen er tom eller ikke
+
+        if ( hode == null && hale == null && antall == 0) { // tilfelle når listen er tom som beskrevet i oppgaves teksten
+           hode = nyNode;
+           hale = hode;
+
+           endringer ++;
+           antall ++;
+
+           return true;
+        }
+        else { // når listen er ikke tom
+            nyNode.forrige = hale;
+            hale.neste = nyNode;
+            hale = nyNode;
+
+            endringer ++;
+            antall ++;
+            return true;
+        }
     }
 
     @Override
@@ -190,11 +213,19 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public String toString() {
-        throw new UnsupportedOperationException();
+        Node<T> nå = hode;
+        StringBuilder builder = new StringBuilder();
+        builder.append(" ,");
+        return builder.toString();
     }
 
     public String omvendtString() {
-        throw new UnsupportedOperationException();
+        Node<T> nå = hale;
+        StringBuilder builder = new StringBuilder();
+        builder.append(" ,");
+        return builder.toString();
+
+
     }
 
     @Override
