@@ -65,8 +65,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         // hvis antall noder like null, så det betyr at listen er tom-
         if (antall==0){
             return true;
-        }
-        else
+        } else
             return false;
     }
 
