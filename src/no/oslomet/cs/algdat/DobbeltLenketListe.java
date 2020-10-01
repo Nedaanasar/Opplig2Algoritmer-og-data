@@ -42,11 +42,19 @@ public class DobbeltLenketListe<T> implements Liste<T> {
     private int antall;            // antall noder i listen
     private int endringer;         // antall endringer i listen
 
-    public DobbeltLenketListe() {
+    public DobbeltLenketListe() { //konstruktør med tom liste
+        hale = null;
+        hode = null;
+        antall = 0;
+        endringer = 0;
 
     }
 
-    public DobbeltLenketListe(T[] a) {
+    public DobbeltLenketListe(T[] a) {  //Konstuktøren
+       // først hvis a er null
+       if (a == null) {
+           throw new NullPointerException(" Tabellen a er null!");
+       }
 
 
     }
