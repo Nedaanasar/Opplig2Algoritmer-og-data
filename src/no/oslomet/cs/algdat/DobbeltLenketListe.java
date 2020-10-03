@@ -242,14 +242,26 @@ public class DobbeltLenketListe<T> implements Liste<T> {
     public String toString() {
         Node<T> nå = hode;
         StringBuilder builder = new StringBuilder();
-        builder.append(" ,");
+        builder.append("[");
+        if ( tom()){
+            builder.append("]");
+            return builder.toString();
+        } else {
+            builder.append(nå.verdi);
+            nå = nå.neste;
+            
+        }
         return builder.toString();
     }
 
     public String omvendtString() {
         Node<T> nå = hale;
         StringBuilder builder = new StringBuilder();
-        builder.append(" ,");
+        builder.append("[");
+        if ( tom()){
+            builder.append("]");
+            return builder.toString();
+        }
         return builder.toString();
 
 
