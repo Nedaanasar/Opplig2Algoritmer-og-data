@@ -146,6 +146,19 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         antall++;
         endringer++;
     }
+    //hjelp metoden
+    private Node<T>finnNode(int index){
+        Node<T> n;
+        if (index <antall/ 2) {
+            n=hode;
+            for (int i =0;i<index;i++)n=n.neste;//har skal den begynne å sjekke fra venstre siden
+        }
+        else {
+            n=hale;
+            for (int i=antall-1;i<index;i--)n=n.forrige; //har skal den sjekke fra høyre siden
+        }
+        return n;
+    }
 
     @Override
     public boolean inneholder(T verdi) {
@@ -154,7 +167,8 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public T hent(int indeks) {
-        throw new UnsupportedOperationException();
+        indeksKontroll(indeks,false);
+        return finnNode(indeks).verdi;
     }
 
     @Override
@@ -164,7 +178,13 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public T oppdater(int indeks, T nyverdi) {
-        throw new UnsupportedOperationException();
+        indeksKontroll(indeks,false);//forst den sjekker hvis indexen er mindre enn 0
+        Objects.requireNonNull(nyverdi,"verdien kan ikke være null");
+        Node<T>n=finnNode(indeks);
+        T gammleverdi=n.verdi;
+        n.verdi=nyverdi; //erstatter verdien
+        endringer ++; //oppdaterer endringer
+        return gammleverdi;
     }
 
     @Override
