@@ -272,8 +272,14 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         } else {
             builder.append(nå.verdi);
             nå = nå.neste;
+            while (nå != null) {
+                builder.append(", ");
+                builder.append(nå.verdi);
+                nå = nå.neste;
+            }
 
         }
+        builder.append("]");
         return builder.toString();
     }
 
@@ -284,7 +290,17 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         if ( tom()){
             builder.append("]");
             return builder.toString();
+        }else {
+            builder.append(nå.verdi);
+            nå = nå.neste;
+            while (nå != null) {
+                builder.append(", ");
+                builder.append(nå.verdi);
+                nå = nå.neste;
+            }
+
         }
+        builder.append("]");
         return builder.toString();
 
 
