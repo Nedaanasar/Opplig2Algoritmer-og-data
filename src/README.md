@@ -21,7 +21,7 @@ Vi har brukt git til å dokumentere arbeidet vårt. Vi har 16 commits totalt, og
 
 I oppgaven har vi hatt følgende arbeidsfordeling:
 * Ali Haji har hatt hovedansvar for oppgave 1, 2. 
-* Else har hatt hovedansvar for oppgave 2, 4, og 6. 
+* Amr Hakmi har hatt hovedansvar for oppgave 3,8. 
 * Fatima har hatt hovedansvar for oppgave 7 og 8. 
 * Vi har i fellesskap løst oppgave 10. 
 
@@ -39,6 +39,13 @@ I oppgaven har vi hatt følgende arbeidsfordeling:
              Det samme for OmvendttoString men vi bruker forrige-peker fra hale til hode.
              Metoden boolean leggInn: først legger vi requireNonNull- metode, legger vi en ny Node og sjekker om listen er tom eller ikke,
              metoden returnerer true,, endringer og antallet økes,
+* Oppgave 3: Her har jeg løste oppgaven 3.a : først lagde jeg denne privte hjelpe metoden finnNode som skal sjekke hvis
+ indeksen er mindre enn antall/2 så skal den begynne å skjekke fra venstre eller så skal den skjekke fra høyre siden.
+             derreter lagde jeg hent metode ved å bruke finn metoden som jeg lagde og indexkontroll so sjekker hvis
+              indexen er mindre enn null.jeg har lagd også oppdater som skal erstatte verdien med et nytt verdie ,først
+               skal den sjekkes hvis den ny verdie er null så kommer feil melding og den skal øke endringer
+             jeg løste oppgaven 3.b og skrev noen forklaring ved metoden            
+             
               hvis listen er tom da returnerer toString metoden ], hvis ikke da sitter vi verdien in 
 * Oppgave 5: "public void leggInn(int indeks, T verdi)" den er en metode som skal ta imot index og verdi,
  så først sjekker jeg om indeksen er mindre enn null eller større enn antall tilate noder,
