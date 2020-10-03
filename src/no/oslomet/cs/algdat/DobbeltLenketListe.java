@@ -55,6 +55,29 @@ public class DobbeltLenketListe<T> implements Liste<T> {
        if (a == null) {
            throw new NullPointerException(" Tabellen a er null!");
        }
+       if (a.length > 0) {
+           int i = 0;
+           for (; i < a.length; i++){
+               if (a[i] != null){
+                   hode = new Node<>(a[i]);
+                   antall++;
+
+                   break;
+               }
+           }
+
+           hale = hode;
+           if (hode != null) {
+               i++;
+               for (; i < a.length; i++){
+                   if (a[i] != null){
+                       hale.neste = new Node<>(a[i], hale, null);
+                       hale = hale.neste;
+                       antall++;
+                   }
+               }
+           }
+       }
 
 
     }
@@ -249,7 +272,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         } else {
             builder.append(nå.verdi);
             nå = nå.neste;
-            
+
         }
         return builder.toString();
     }
