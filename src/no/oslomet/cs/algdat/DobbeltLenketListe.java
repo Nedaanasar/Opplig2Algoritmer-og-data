@@ -83,9 +83,37 @@ public class DobbeltLenketListe<T> implements Liste<T> {
     }
 
     public Liste<T> subliste(int fra, int til){
-        throw new UnsupportedOperationException();
-    }
+        fratilKontroll (antall, fra, til); // vi bruker metoden til å sjekke at indeksene er ikke out of bounds
+        DobbeltLenketListe<T> newlist=new DobbeltLenketListe<T>(); // vi lager ny liste
+        Node<T> n =hode; //vi declarer n Node som hode
+        int i=fra;// i er lik indeksne fra
+        for (;i<til;i++){ // løkken skal skal øke til indeksen "til"
+            n=finnNode(i);// vi bruker finnNode metode til å finnne indeksen i verdie
+            if (n!=null){//hvis n er like null så skal den hoppe over men hvis ikke så skal den legge en tall i listen
+                newlist.leggInn(n.verdi);//bruker LeggInn metode til å legge n verdi i listen
+                n=n.neste;
+            }
+        }
+        return newlist;
 
+
+
+
+    }
+    private static void fratilKontroll(int antall , int fra, int til)
+    {
+        if (fra < 0)                                  // fra er negativ
+            throw new IndexOutOfBoundsException
+                    ("fra(" + fra + ") er negativ!");
+
+        if (til > antall )                          // til er utenfor tabellen
+            throw new IndexOutOfBoundsException
+                    ("til(" + til + ") > antall (" + antall  + ")");
+
+        if (fra > til)                                // fra er større enn til
+            throw new IllegalArgumentException
+                    ("fra(" + fra + ") > til(" + til + ") - illegalt intervall!");
+    }
     @Override
     public int antall() {
         return antall;
