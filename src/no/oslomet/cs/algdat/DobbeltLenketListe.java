@@ -292,11 +292,11 @@ public class DobbeltLenketListe<T> implements Liste<T> {
             return builder.toString();
         }else {
             builder.append(nå.verdi);
-            nå = nå.neste;
+            nå = nå.forrige;
             while (nå != null) {
                 builder.append(", ");
                 builder.append(nå.verdi);
-                nå = nå.neste;
+                nå = nå.forrige;
             }
 
         }
