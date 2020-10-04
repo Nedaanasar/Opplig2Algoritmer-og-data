@@ -224,8 +224,25 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public int indeksTil(T verdi) {
-        throw new UnsupportedOperationException();
-    }
+        // her starter jeg med å legge en if-løkke som sjekker når verdien er lik null så skal retunere -1
+        if (verdi == null)
+            return -1;
+            //her så er p  hode
+            Node<T> p = hode;
+            //her er det en for-løkke som looper gjennom, her så skal for-løkken sjekke om verdien finns i listen og retunere -1 hvis den ikke finnes
+            for (int i = 0; i < antall; i++) {
+                if (p.verdi.equals(verdi))
+                    return i;
+                p = p.neste;
+            }
+            return -1;
+        }
+
+
+
+
+        //throw new UnsupportedOperationException();
+
 
     @Override
     public T oppdater(int indeks, T nyverdi) {
