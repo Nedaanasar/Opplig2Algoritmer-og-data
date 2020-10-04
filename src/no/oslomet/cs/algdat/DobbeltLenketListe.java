@@ -212,9 +212,9 @@ public class DobbeltLenketListe<T> implements Liste<T> {
     }
 
     @Override
-    public boolean inneholder(T verdi) {
-        throw new UnsupportedOperationException();
-    }
+    public boolean inneholder(T verdi) {return indeksTil(verdi) !=-1;} //her så bruker jeg ett kall metode (indekstil)
+    //{throw new UnsupportedOperationException();
+
 
     @Override
     public T hent(int indeks) {
