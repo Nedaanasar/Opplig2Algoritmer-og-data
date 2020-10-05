@@ -17,6 +17,7 @@ Oppgaven er levert av følgende studenter:
 * Ali Haji, S341891, s341891@oslomet.no
 * Nedaa Alnassar, s341875, s341875@oslomet.no
 *Amr Hakmi ,s344081
+* Omar Abbod, s341881, s341881@oslomet.no
 
 Vi har brukt git til å dokumentere arbeidet vårt. Vi har 16 commits totalt, og hver logg-melding beskriver det vi har gjort av endringer.
 
@@ -24,7 +25,7 @@ I oppgaven har vi hatt følgende arbeidsfordeling:
 * Ali Haji har hatt hovedansvar for oppgave 1, 2. 
 * Amr Hakmi har hatt hovedansvar for oppgave 3,8. 
 * Nedaa har hatt hovedansvar for oppgave 5 og 6. 
-
+* Omar Abbod har hatt hovedansvar for oppgave 9,10.
 
 # Beskrivelse av oppgaveløsning (maks 5 linjer per oppgave)
 
@@ -62,3 +63,6 @@ I oppgaven har vi hatt følgende arbeidsfordeling:
 hasnext metode ikke er true så throws Exception at det er tom.vi setter fjernOk til true. så flyttes denne til neste node
 og ruturnere denneVerdi.. 8.b vi returnere en instans av iteratorklassen 
 
+* oppgave 9.a først jeg har lagt metode remove() for å kunne sjekke hvis fjernOK ikke så kan ikke fjerne noe element,
+ så vi sjekker etterhvert hvis iteratorendringer != endringer hvis ja 
+så vi lager endriger i listen og etter at Listen ble endret setter vi at fjernOK til false.
