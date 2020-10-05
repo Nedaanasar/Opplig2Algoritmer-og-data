@@ -52,5 +52,10 @@ I oppgaven har vi hatt følgende arbeidsfordeling:
  så sjekket om Null-verdi, ellers så skal sjekke om vi skal legg noden på hviken posisjon,
  om den er i første eller sisste posisjon, i 0 posisjon sier vi at den noden vi leger blir noden.nest er head, på samme måten når den skal legges i sisste posisjon.
  hvis vi ønsker å legge noden noen sted i mitdten så først prøver vi å finne noden som legger i indeks-posisjonen gjennom for løkke.
+ * oppgave 6: første T fjern(int indeks)-metoden vi skal fjerne noden når vi har indeksen så først sjekker om antall noder er 1 så
+ det skal vi fjerne den, og sjekker om posisjonen til noden om den ligger i 0 posisjon eller i sisste posisjen så bytter vi 
+ bare pekere, i siste tilfylle brukte jeg metoden finnNode for å finne noden som vi skal fjernes og byttet etterpå perkere, og sist minuserte antall noder og retunerte verdien til moden som ble fjernet.
+ boolean fjern(T verdi)-metoden: sjekket om verdien er null og retunerte false; så brukte While lokke for å loppe over listen og sjekker verdien.
+ På samme måte til forig metoden.
  
 
