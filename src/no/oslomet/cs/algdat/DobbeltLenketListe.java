@@ -388,6 +388,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
         @Override
         public void remove(){
+
             throw new UnsupportedOperationException();
         }
 
