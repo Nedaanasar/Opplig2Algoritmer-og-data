@@ -386,7 +386,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return new DobbeltLenketListeIterator();  //returnere en instans av iteratorklassen
+        return new DobbeltLenketListeIterator();  //returner en instans av iteratorklassen
     }
 
     public Iterator<T> iterator(int indeks) {
