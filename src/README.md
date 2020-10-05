@@ -22,7 +22,7 @@ Vi har brukt git til å dokumentere arbeidet vårt. Vi har 16 commits totalt, og
 I oppgaven har vi hatt følgende arbeidsfordeling:
 * Ali Haji har hatt hovedansvar for oppgave 1, 2. 
 * Amr Hakmi har hatt hovedansvar for oppgave 3,8. 
-* Fatima har hatt hovedansvar for oppgave 7 og 8. 
+* Nedaa har hatt hovedansvar for oppgave 5 og 6. 
 * Vi har i fellesskap løst oppgave 10. 
 
 
