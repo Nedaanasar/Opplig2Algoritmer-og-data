@@ -16,14 +16,13 @@ Se oblig-tekst for alle krav. Oppgaver som ikke oppfyller følgende vil ikke få
 Oppgaven er levert av følgende studenter:
 * Ali Haji, S341891, s341891@oslomet.no
 * Nedaa Alnassar, s341875, s341875@oslomet.no
-* Yazan Alshhabi, s341871, s341871@oslomet.no
 
 Vi har brukt git til å dokumentere arbeidet vårt. Vi har 16 commits totalt, og hver logg-melding beskriver det vi har gjort av endringer.
 
 I oppgaven har vi hatt følgende arbeidsfordeling:
 * Ali Haji har hatt hovedansvar for oppgave 1, 2. 
-* Amr Hakmi har hatt hovedansvar for oppgave 3,8.  
-* Yazan alshhabi har hatt hovedansvar for oppgave 4 og 7.
+* Amr Hakmi har hatt hovedansvar for oppgave 3,8. 
+* Fatima har hatt hovedansvar for oppgave 7 og 8. 
 * Vi har i fellesskap løst oppgave 10. 
 
 
@@ -53,8 +52,5 @@ I oppgaven har vi hatt følgende arbeidsfordeling:
  så sjekket om Null-verdi, ellers så skal sjekke om vi skal legg noden på hviken posisjon,
  om den er i første eller sisste posisjon, i 0 posisjon sier vi at den noden vi leger blir noden.nest er head, på samme måten når den skal legges i sisste posisjon.
  hvis vi ønsker å legge noden noen sted i mitdten så først prøver vi å finne noden som legger i indeks-posisjonen gjennom for løkke.
-oppgave 4: indekstil metoden er den metoden som skal retunere -1 om indeksen til verdein om den ikke finnes i listen og skal retunere posisjonen eller indeksen til verdien 
-hvis den finnes. jeg lagde boolean metoden som skal retunere true eller false ved bruk av ett kall metode (indekstil)
-i den indeksTil metoden så la jeg en for-løkke som sjekker posisjoen til verdien om den finnes i listen eller ikke og retunere -1. 
  
 

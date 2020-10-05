@@ -15,7 +15,7 @@ public class main {
         System.out.println("legg nummer 0 til liste {1,2,3,4} i foran" + liste.toString());
         liste.leggInn(5, 5);
         System.out.println("legg nummer 5 til liste {0,1,2,3,4} i bakerst" + liste.toString());
-        liste.leggInn(88, 3);
+        liste.leggInn(3, 88);
         System.out.println("legg nummer 88 til liste {0,1,2,3,4,5} i midten " + liste.toString());
 
 

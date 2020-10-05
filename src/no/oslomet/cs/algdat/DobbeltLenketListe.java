@@ -206,7 +206,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         }
         else {
             n=hale;
-            for (int i=antall-1;i<index;i--)n=n.forrige; //har skal den sjekke fra høyre siden
+            for (int i=antall-1;i>index;i--)n=n.forrige; //har skal den sjekke fra høyre siden
         }
         return n;
     }
@@ -260,16 +260,58 @@ public class DobbeltLenketListe<T> implements Liste<T> {
        if (verdi == null){
            return false;
        }
-       return true;
+       // insiliserer hode noden
+       Node<T> p = hode;
+       // bruker while lukke for løpe over hele listen og finne verdien
+       while (p!=null){
+           if (p.verdi.equals(verdi)){
+               break;// hvis vi finner den verdi så skal vi ut
+           }
+           p= p.neste; // eller skal vi sjekke neste noden her.
+
+       }
+       // 1- første tilfelle sjekker om null verdie og retunrer vi false
+       if (p == null){
+           return false;
+       }
+       // så sjekker på samme måten
+       // 2- er listen inneholder en node
+        if (antall ==1){
+            hode = hale = null;
+        }
+        //3- er den noden som skal fjernes første noden
+        else if (p==hode){
+            hode = hode.neste;
+            hode.forrige = null;
+        }
+        // 4- sisste noden i listen
+        else if (p==hale){
+            hale = hale.forrige;
+            hale.neste = null;
+        }
+        //5- om den ligger inn i listen så endrer vi perkere....
+        else {
+            p.neste.forrige = p.forrige;
+            p.forrige.neste = p.neste;
+        }
+
+        antall--;
+        endringer++;
+        return true;
+
     }
 
     @Override
     public T fjern(int indeks) {
-
         Node<T> q;
+        indeksKontroll(indeks,false);
+        //sjekker om listen inholder bare en node
+        if (antall == 1){
+            q= hode = hale = null;
+        }
         //sjekker om indexen til noden som skal fjernes
         //1- første noden
-        if (indeks==0){
+        else if (indeks==0){
             q = hode;
             hode = hode.neste;
             hode.forrige=null;
@@ -280,24 +322,15 @@ public class DobbeltLenketListe<T> implements Liste<T> {
             hale=q.forrige;
             hale.neste = null;
         }
-        //3- om den er nærmere til hoden
-        else if (indeks <antall/2){
-            q = hode;
-            for (int i = 0; i<indeks;i++){
-                q =q.neste;
-            }
+        else {
+             q = finnNode(indeks); // her bruker vi metoden"finnNode" for finne posisjon til noden.
+           q.forrige.neste = q.neste; //oppdatere neste pekeren slik at den peker på nesten noden
+            q.neste.forrige = q.forrige; // oppdaterer forig peker....
+        }
 
-        }
-        // 4- om den er nærmere til halen
-        else{
-            q= hale;
-            for (int i = antall-1; i>indeks;i--){
-                q = q.forrige;
-            }
-        }
         antall--;
         endringer++;
-        return q.verdi;
+        return q.verdi; // retunerer verdien til noden som vi hadde fjernet
 
     }
 
@@ -353,7 +386,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public Iterator<T> iterator() {
-        throw new UnsupportedOperationException();
+        return new DobbeltLenketListeIterator();  //returner en instans av iteratorklassen
     }
 
     public Iterator<T> iterator(int indeks) {
@@ -383,11 +416,27 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
         @Override
         public T next(){
-            throw new UnsupportedOperationException();
+            if (endringer!=iteratorendringer){throw new ConcurrentModificationException("liste er endret");}//sjekeks om det er like
+            if (!hasNext()){throw new NoSuchElementException("Det er tom !");}//sjekeks hvis denne er null
+            fjernOK=true; //settes til true
+            T denneVerdi=denne.verdi; //lage variablen denneVerdi
+            denne=denne.neste;//flyttes denne til neste node
+            return denneVerdi; //vi returnerer "denne" verdi
+
         }
 
         @Override
         public void remove(){
+            Node<T> p = (denne == null ? hale : denne.forrige);
+            if(!fjernOK){
+                throw new IllegalStateException("Kan ikke fjerne noe element nå!");
+            }
+            if(iteratorendringer != endringer){
+                throw new ConcurrentModificationException("Listen er endret!");
+            }
+            fjernOK = false;
+
+
             throw new UnsupportedOperationException();
         }
 
