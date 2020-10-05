@@ -16,6 +16,7 @@ Se oblig-tekst for alle krav. Oppgaver som ikke oppfyller følgende vil ikke få
 Oppgaven er levert av følgende studenter:
 * Ali Haji, S341891, s341891@oslomet.no
 * Nedaa Alnassar, s341875, s341875@oslomet.no
+Amr Hakmi ,s344081
 
 Vi har brukt git til å dokumentere arbeidet vårt. Vi har 16 commits totalt, og hver logg-melding beskriver det vi har gjort av endringer.
 
@@ -58,4 +59,7 @@ I oppgaven har vi hatt følgende arbeidsfordeling:
  boolean fjern(T verdi)-metoden: sjekket om verdien er null og retunerte false; så brukte While lokke for å loppe over listen og sjekker verdien.
  På samme måte til forig metoden.
  
+* Oppgave 8.a først sjekeks hvis endringer!=iteratorendringer hvis ja så throws Exception. så sjekekr jeg hvis hvis
+hasnext metode ikke er true så throws Exception at det er tom.vi setter fjernOk til true. så flyttes denne til neste node
+og ruturnere denneVerdi.. 8.b vi returnere en instans av iteratorklassen 
 
