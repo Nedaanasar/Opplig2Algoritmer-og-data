@@ -16,7 +16,7 @@ Se oblig-tekst for alle krav. Oppgaver som ikke oppfyller følgende vil ikke få
 Oppgaven er levert av følgende studenter:
 * Ali Haji, S341891, s341891@oslomet.no
 * Nedaa Alnassar, s341875, s341875@oslomet.no
-Amr Hakmi ,s344081
+*Amr Hakmi ,s344081
 
 Vi har brukt git til å dokumentere arbeidet vårt. Vi har 16 commits totalt, og hver logg-melding beskriver det vi har gjort av endringer.
 
