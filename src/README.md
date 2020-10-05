@@ -24,7 +24,8 @@ I oppgaven har vi hatt følgende arbeidsfordeling:
 * Ali Haji har hatt hovedansvar for oppgave 1, 2. 
 * Amr Hakmi har hatt hovedansvar for oppgave 3,8. 
 * Nedaa har hatt hovedansvar for oppgave 5 og 6. 
-* Vi har i fellesskap løst oppgave 10. 
+* Vi har i fellesskap løst oppgave 10.
+klklk 
 
 
 # Beskrivelse av oppgaveløsning (maks 5 linjer per oppgave)
