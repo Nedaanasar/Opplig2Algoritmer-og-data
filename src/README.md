@@ -26,6 +26,7 @@ I oppgaven har vi hatt følgende arbeidsfordeling:
 * Amr Hakmi har hatt hovedansvar for oppgave 3,8. 
 * Nedaa har hatt hovedansvar for oppgave 5 og 6. 
 * Omar Abbod har hatt hovedansvar for oppgave 9,10.
+*Yazan alshhabi har hatt hovedansvar for oppgave 4 og 7
 
 # Beskrivelse av oppgaveløsning (maks 5 linjer per oppgave)
 
@@ -48,6 +49,11 @@ I oppgaven har vi hatt følgende arbeidsfordeling:
              jeg løste oppgaven 3.b og skrev noen forklaring ved metoden            
              
               hvis listen er tom da returnerer toString metoden ], hvis ikke da sitter vi verdien in 
+*oppgave 4: ( jeg har skrevet før nå en beskrivelse angående denne oppgaven, men alt ble borte. derfor så skriver jeg alt på nytt). 
+i denne oppgave så skulle vi lage en metode som sjekker indeksen eller posisjonen til en verdi finns i listen og retunere -1 om den ikke
+finnes. jeg brukte ett kall metode (indeksTil) i den inneholder boolean metode som skal retunere true eller false om den finnes eller ikke
+i andre metoden som skal returnere -1 så tok jeg en if hvor jeg la om verdien er lik null så retuner -1. og tok en for løkke som skal loope
+gjennom listen for å sjekke neste verdien om den finnes siden den er dobbellenketlisteog retunerer -1 hvis den ikke finnes.
 * Oppgave 5: "public void leggInn(int indeks, T verdi)" den er en metode som skal ta imot index og verdi,
  så først sjekker jeg om indeksen er mindre enn null eller større enn antall tilate noder,
  så sjekket om Null-verdi, ellers så skal sjekke om vi skal legg noden på hviken posisjon,
