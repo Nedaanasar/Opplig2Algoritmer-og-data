@@ -406,7 +406,10 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         }
 
         private DobbeltLenketListeIterator(int indeks){
-            throw new UnsupportedOperationException();
+            denne=finnNode(indeks); //sette  denne til noden som hører til den gitt index ved hjelp av finnNode
+            fjernOK = false; //resten skal være som gitt
+            iteratorendringer = endringer;
+
         }
 
         @Override

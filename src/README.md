@@ -61,7 +61,8 @@ I oppgaven har vi hatt følgende arbeidsfordeling:
  
 * Oppgave 8.a først sjekeks hvis endringer!=iteratorendringer hvis ja så throws Exception. så sjekekr jeg hvis hvis
 hasnext metode ikke er true så throws Exception at det er tom.vi setter fjernOk til true. så flyttes denne til neste node
-og ruturnere denneVerdi.. 8.b vi returnere en instans av iteratorklassen 
+og ruturnere denneVerdi.. 8.b vi returnere en instans av iteratorklassen .8.c settes noden til giit indexen ved hjelp av 
+finnNode(index) metoden og resten skal være som gitt. 
 
 * oppgave 9.a først jeg har lagt metode remove() for å kunne sjekke hvis fjernOK ikke så kan ikke fjerne noe element,
  så vi sjekker etterhvert hvis iteratorendringer != endringer hvis ja 
