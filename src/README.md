@@ -69,3 +69,5 @@ indeksen er mindre enn null,så  returner en instans av iteratorklassen ved inde
 * oppgave 9.a først jeg har lagt metode remove() for å kunne sjekke hvis fjernOK ikke så kan ikke fjerne noe element,
  så vi sjekker etterhvert hvis iteratorendringer != endringer hvis ja 
 så vi lager endriger i listen og etter at Listen ble endret setter vi at fjernOK til false.
+..resten av oppgave 9. vi sjekker hvis p er lik hode og hvis er er bare 1 så
+ vi setter kun en verdi i listen ,og fjerner den første, elllers hvis p er lik hale så fjerner vi den siste.
