@@ -3,6 +3,42 @@ package no.oslomet.cs.algdat;
 public class main {
     public static void main(String[] args) {
 
+        System.out.println("testen for metodene int antall() og boolean tom(): ");
+        Liste<String> liste8 = new DobbeltLenketListe<>();
+        System.out.println(liste8.antall() + " " + liste8.tom());
+        System.out.println(" ");
+
+        // Oppgave 1- konstruktøren
+        System.out.println("testen for konstruktøren:  ");
+        String[] n = {"Ole", null, "Per", "Kari", null};
+        Liste<String> liste1 = new DobbeltLenketListe<>(n);
+        System.out.println(liste1.antall() + " " + liste1.tom());
+        System.out.println(" ");
+
+        // Oppgave 2- metodene toString og omvendtString
+        System.out.println("testen for metodene toString og omvendtString: ");
+        String[] s1 = {}, s2 = {"A"}, s3 = {null,"A",null,"B",null};
+        DobbeltLenketListe<String> l1 = new DobbeltLenketListe<>(s1);
+        DobbeltLenketListe<String> l2 = new DobbeltLenketListe<>(s2);
+        DobbeltLenketListe<String> l3 = new DobbeltLenketListe<>(s3);
+        System.out.println(l1.toString() + " " + l2.toString()
+                + " " + l3.toString() + " " + l1.omvendtString() + " "
+                + l2.omvendtString() + " " + l3.omvendtString());
+        System.out.println(" ");
+
+        // Oppgave 2- metoden boolean legginn
+        System.out.println(" testen for metoden boolean legginn (T verdi) :  ");
+
+        DobbeltLenketListe<Integer> liste7 = new DobbeltLenketListe<>();
+        System.out.println(liste7.toString() + " " + liste7.omvendtString());
+        for (int i = 1; i <= 3; i++)
+        {
+            liste7.leggInn(i);
+            System.out.println(liste7.toString() + " " + liste7.omvendtString());
+        }
+        System.out.println(" ");
+
+
         // skejkke oppgave 5
         DobbeltLenketListe<Integer> liste = new DobbeltLenketListe<>();
         System.out.println("oppgave 5");
@@ -30,5 +66,13 @@ public class main {
         liste.forEach(s -> System.out.print(s + "​ ​"));
         System.out.println();
          for(String s :liste3) System.out.print(s +"​ ​");
+
+
+
+
+
+
+
+
     }
 }
