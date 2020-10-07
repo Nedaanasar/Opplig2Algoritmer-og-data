@@ -337,6 +337,23 @@ public class DobbeltLenketListe<T> implements Liste<T> {
     @Override
     public void nullstill() {
         //throw new UnsupportedOperationException();
+        //siden vi skal starte fra hode og mot hale så antar jeg at:
+        Node<T> p= hode, q;
+        while (p!=null){
+            //her så bruker vi pekeren for å hjelpe for å gå fra hodet til hale
+            q=p.neste;
+           // her vi mener at neste indeksen og verdien er null som ble spurt om i oppgaven
+            p.neste=null;
+            p.verdi=null;
+            //her sier jeg at både p og q skal være lik null
+            p=q;
+        }
+        hode=hale;
+        //her så øker vi endringer og setter antall til=0;
+        endringer++;
+        antall=0;
+        //jeg har testa løsningen på denne oppgaven og det gikk greit. deretter så skal jeg teste den andre måten for å se hvilken som bruker mindre
+        // tid for å sjekke hvilken som virker best.
     }
 
     @Override
