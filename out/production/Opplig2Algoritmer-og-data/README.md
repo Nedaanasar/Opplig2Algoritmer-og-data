@@ -64,6 +64,11 @@ gjennom listen for å sjekke neste verdien om den finnes siden den er dobbellenk
  bare pekere, i siste tilfylle brukte jeg metoden finnNode for å finne noden som vi skal fjernes og byttet etterpå perkere, og sist minuserte antall noder og retunerte verdien til moden som ble fjernet.
  boolean fjern(T verdi)-metoden: sjekket om verdien er null og retunerte false; så brukte While lokke for å loppe over listen og sjekker verdien.
  På samme måte til forig metoden.
+
+*Oppgave 7: i denne oppgaven så ble vi bedt om tømme alt, og vi ble bedt om å gjøre den på to måter. jeg gjorde første måten som gikk greit
+ gjennom testen. jeg antar at Node<T> p skal være hode og q. og antar at q vil være den p og pekeren (neste) som skal hjelpe til å ta oss 
+mot hode og på slutten så øker jeg endringer og setter antall =0.
+
  
 * Oppgave 8.a først sjekeks hvis endringer!=iteratorendringer hvis ja så throws Exception. så sjekekr jeg hvis hvis
 hasnext metode ikke er true så throws Exception at det er tom.vi setter fjernOk til true. så flyttes denne til neste node
