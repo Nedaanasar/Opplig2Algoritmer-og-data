@@ -78,3 +78,6 @@ og ruturnere denneVerdi.. 8.b vi returnere en instans av iteratorklassen
 * oppgave 9.a først jeg har lagt metode remove() for å kunne sjekke hvis fjernOK ikke så kan ikke fjerne noe element,
  så vi sjekker etterhvert hvis iteratorendringer != endringer hvis ja 
 så vi lager endriger i listen og etter at Listen ble endret setter vi at fjernOK til false.
+
+* Oppgave 10. vi skal sortere liste ved hjelp av denn komperatoren (c), så det vi gjør at vi bruker metodene
+so står grensesnitt Liste, så vi sjekker hvis liste tom() er returnert og har betigenlse at  i mindre en listeantall() og j er enn liste antall(), og 
