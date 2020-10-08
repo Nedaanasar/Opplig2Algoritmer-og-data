@@ -1,5 +1,11 @@
 package no.oslomet.cs.algdat;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
+
+
+
 public class main {
     public static void main(String[] args) {
 
@@ -67,8 +73,26 @@ public class main {
         System.out.println();
          for(String s :liste3) System.out.print(s +"​ ​");
 
+         System.out.println(",");
 
+//Oppgave 10
 
+        System.out.println("oppgave 10");
+
+        String[] Navn = {"Lars","Anders","Bodil","Kari","Per","Berit"};
+
+        Liste<String> Liste1 = new DobbeltLenketListe<>(Navn);
+        //Liste<String> Liste2 = new TabellListe<>(Navn);
+     //   Liste<String> Liste3 = new EnkeltLenketListe<>(Navn);
+        DobbeltLenketListe.sorter(liste1, Comparator.naturalOrder());
+        DobbeltLenketListe.sorter(liste2, Comparator.naturalOrder());
+        DobbeltLenketListe.sorter(liste3, Comparator.naturalOrder());
+        System.out.println(Liste1); // [Anders, Berit, Bodil, Kari, Lars, Per]
+      //  System.out.println(Liste2); // [Anders, Berit, Bodil, Kari, Lars, Per]
+       // System.out.println(Liste3); // [Anders, Berit, Bodil, Kari, Lars, Per]
+// Tabellen navn er upåvirket:
+        System.out.println(Arrays.toString(navn));
+// [Lars, Anders, Bodil, Kari, Per, Berit]
 
 
 
