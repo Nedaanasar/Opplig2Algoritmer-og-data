@@ -68,7 +68,9 @@ gjennom listen for å sjekke neste verdien om den finnes siden den er dobbellenk
 
 *Oppgave 7: i denne oppgaven så ble vi bedt om tømme alt, og vi ble bedt om å gjøre den på to måter. jeg gjorde første måten som gikk greit
  gjennom testen. jeg antar at Node<T> p skal være hode og q. og antar at q vil være den p og pekeren (neste) som skal hjelpe til å ta oss 
-mot hode og på slutten så øker jeg endringer og setter antall =0.
+mot hode og på slutten så øker jeg endringer og setter antall =0. i andre metoden så satt jeg fjern kallemetoden, men da jeg testa metoden 
+så gikk den ikke gjennom og visste at det er noe feil i linjen 333 som hører til oppgave 6 og vi skal sjekke feilen og fikser den. og deretter 
+skal jeg teste begge metodene og se hvilken er mest effektiv
 
  
 * Oppgave 8.a først sjekeks hvis endringer!=iteratorendringer hvis ja så throws Exception. så sjekekr jeg hvis hvis
