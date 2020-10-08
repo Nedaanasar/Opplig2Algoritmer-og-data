@@ -338,7 +338,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
     public void nullstill() {
         //throw new UnsupportedOperationException();
         //siden vi skal starte fra hode og mot hale så antar jeg at:
-        Node<T> p= hode, q;
+       /* Node<T> p= hode, q;
         while (p!=null){
             //her så bruker vi pekeren for å hjelpe for å gå fra hodet til hale
             q=p.neste;
@@ -353,7 +353,21 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         endringer++;
         antall=0;
         //jeg har testa løsningen på denne oppgaven og det gikk greit. deretter så skal jeg teste den andre måten for å se hvilken som bruker mindre
-        // tid for å sjekke hvilken som virker best.
+        // tid for å sjekke hvilken som virker best.*/
+        //metode 2
+        //i denne metoden så fikk jeg feil med testen som viser at det er noe feil i linje 333 som hører til oppgave 6 som også har noe å gjøre med fjern metode
+        // som vi skal utforsøke mere og finne feilen og fikse den.
+        //men jeg prøvde å legge 1 i fjern metoden og den funka greit og gjennomgått testen men det er feil å sette 1 i stedet for 0.
+    Node<T> p = hode;
+    int j =0;
+    while (p !=null){
+        fjern(0);
+        j++;
+        p = p.neste;
+    }
+    hode = hale= null;
+    endringer++;
+    antall=0;
     }
 
     @Override

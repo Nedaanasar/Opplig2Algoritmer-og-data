@@ -18,6 +18,7 @@ Oppgaven er levert av følgende studenter:
 * Nedaa Alnassar, s341875, s341875@oslomet.no
 *Amr Hakmi ,s344081
 * Omar Abbod, s341881, s341881@oslomet.no
+* Yazan alshhabi s341871, s341871@oslomet.no
 
 Vi har brukt git til å dokumentere arbeidet vårt. Vi har 16 commits totalt, og hver logg-melding beskriver det vi har gjort av endringer.
 
